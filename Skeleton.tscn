@@ -1,21 +1,22 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Skeleton.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Hand_skeleton1.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Arm_skeleton1.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Arm_skeleton1.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Foot_skeleton1.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Leg_skeleton1.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Leg_skeleton1.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Sprites/Skeleton/Torso_skeleton1.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Leg_skeleton1.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Leg_skeleton1.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Foot_skeleton1.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Sprites/Skeleton/Head_skeleton1.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Sprites/Skeleton/Jaw_skeleton1.png" type="Texture" id=13]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Arm_skeleton1.png" type="Texture" id=14]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Arm_skeleton1.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Hand_skeleton1.png" type="Texture" id=16]
+[ext_resource path="res://String.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Hand_skeleton1.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Arm_skeleton1.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Arm_skeleton1.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Foot_skeleton1.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Leg_skeleton1.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Leg_skeleton1.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Sprites/Skeleton/Torso_skeleton1.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Sprites/Skeleton/Head_skeleton1.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Sprites/Skeleton/Jaw_skeleton1.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Leg_skeleton1.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Leg_skeleton1.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Foot_skeleton1.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Arm_skeleton1.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Arm_skeleton1.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Hand_skeleton1.png" type="Texture" id=17]
 
 [sub_resource type="Animation" id=1]
 
@@ -46,6 +47,255 @@ tracks/1/keys = {
 "transitions": PoolRealArray(  ),
 "update": 0,
 "values": [  ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "Idle"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Com_Joint/L_Hip_Joint/L_Knee_Joint/L_Ankle_Joint:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Com_Joint/L_Hip_Joint/L_Knee_Joint:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 14.7959 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Com_Joint/L_Hip_Joint:rotation_degrees")
+tracks/2/interp = 2
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Com_Joint/R_Hip_Joint:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = false
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Com_Joint/R_Hip_Joint/R_Knee_Joint:rotation_degrees")
+tracks/4/interp = 2
+tracks/4/loop_wrap = false
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 10.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Com_Joint/R_Hip_Joint/R_Knee_Joint/R_Ankle_Joint:rotation_degrees")
+tracks/5/interp = 2
+tracks/5/loop_wrap = false
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Com_Joint/R_Shoulder_Joint:rotation_degrees")
+tracks/6/interp = 2
+tracks/6/loop_wrap = false
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Com_Joint/L_Shoulder_Joint:rotation_degrees")
+tracks/7/interp = 2
+tracks/7/loop_wrap = false
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 20.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Com_Joint/L_Shoulder_Joint/L_Elbow_Joint:rotation_degrees")
+tracks/8/interp = 2
+tracks/8/loop_wrap = false
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -20.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "New Anim"
+length = 1.0
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "String_Walk"
+length = 2.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Com_Joint:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -10.0, 0.0, -10.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Com_Joint/Head_Joint:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 0.0, 10.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Com_Joint/L_Shoulder_Joint:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, 0.0, 10.0, 20.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Com_Joint/R_Shoulder_Joint:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -20.0, -10.0, -20.0, -40.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Com_Joint/L_Hip_Joint:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 0.0, -40.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Com_Joint/L_Hip_Joint/L_Knee_Joint:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 5.0, 15.0, 5.0, 60.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Com_Joint/R_Hip_Joint:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -10.0, -50.0, -10.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Com_Joint/R_Hip_Joint/R_Knee_Joint:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, 70.0, 10.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Com_Joint/L_Shoulder_Joint/L_Elbow_Joint:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -30.0, -60.0, -30.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Com_Joint/R_Shoulder_Joint/R_Elbow_Joint:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 0.0, -20.0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -214,172 +464,187 @@ tracks/12/keys = {
 [node name="Skeleton" type="Node2D"]
 
 script = ExtResource( 1 )
-anim = "Walk"
+anim = "Idle"
 
 [node name="Com_Joint" type="Position2D" parent="." index="0"]
 
-editor/display_folded = true
-position = Vector2( 0, -1.64958 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="L_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="0"]
+[node name="String" parent="Com_Joint" index="0" instance=ExtResource( 2 )]
+
+[node name="L_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="1"]
 
 position = Vector2( 12.785, -30.219 )
-rotation = 0.656736
+rotation = 0.349066
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Elbow_Joint" type="Position2D" parent="Com_Joint/L_Shoulder_Joint" index="0"]
 
 position = Vector2( 7.74846, 15.1095 )
-rotation = -0.60997
+rotation = -0.349066
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Wrist_Joint" type="Position2D" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint" index="0"]
 
+editor/display_folded = true
 position = Vector2( 0.193718, 15.6906 )
-rotation = -0.349066
 _sections_unfolded = [ "Transform" ]
 
-[node name="L_Hand" type="Sprite" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint/L_Wrist_Joint" index="0"]
+[node name="String" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint/L_Wrist_Joint" index="0" instance=ExtResource( 2 )]
+
+rotation = 2.48353e-08
+
+[node name="L_Hand" type="Sprite" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint/L_Wrist_Joint" index="1"]
 
 position = Vector2( -19.793, -1.99354 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="L_Low_Arm" type="Sprite" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint" index="1"]
 
 position = Vector2( -19.3711, 12.9787 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="L_Up_Arm" type="Sprite" parent="Com_Joint/L_Shoulder_Joint" index="1"]
 
 position = Vector2( -11.6227, 28.863 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
-[node name="L_Hip_Joint" type="Position2D" parent="Com_Joint" index="1"]
+[node name="L_Hip_Joint" type="Position2D" parent="Com_Joint" index="2"]
 
+editor/display_folded = true
 position = Vector2( 5.12625, 7.68937 )
-rotation = -0.395831
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Knee_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint" index="0"]
 
 position = Vector2( 0.0577621, 26.4845 )
-rotation = 0.570364
+rotation = 0.258238
 _sections_unfolded = [ "Transform" ]
 
-[node name="L_Ankle_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="0"]
+[node name="String" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="0" instance=ExtResource( 2 )]
+
+scale = Vector2( 1, -900 )
+
+[node name="L_Ankle_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="1"]
 
 position = Vector2( -0.367973, 17.1983 )
-rotation = -0.0863716
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Foot" type="Sprite" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint/L_Ankle_Joint" index="0"]
 
 position = Vector2( -2.37015, -51.0376 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
-[node name="L_Low_Leg" type="Sprite" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="1"]
+[node name="L_Low_Leg" type="Sprite" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="2"]
 
 position = Vector2( -3.49821, -34.0301 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="L_Up_Leg" type="Sprite" parent="Com_Joint/L_Hip_Joint" index="1"]
 
 position = Vector2( -3.55987, -7.8922 )
-texture = ExtResource( 7 )
-
-[node name="Torso" type="Sprite" parent="Com_Joint" index="2"]
-
 texture = ExtResource( 8 )
 
-[node name="R_Hip_Joint" type="Position2D" parent="Com_Joint" index="3"]
+[node name="Torso" type="Sprite" parent="Com_Joint" index="3"]
 
-position = Vector2( -7.68937, 7.40458 )
-rotation = 0.264484
-_sections_unfolded = [ "Transform", "Z Index" ]
-
-[node name="R_Up_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint" index="0"]
-
-position = Vector2( 9.09088, -7.69228 )
 texture = ExtResource( 9 )
-
-[node name="R_Knee_Joint" type="Position2D" parent="Com_Joint/R_Hip_Joint" index="1"]
-
-position = Vector2( -1.34518, 26.1588 )
-rotation = 0.955457
-_sections_unfolded = [ "Transform" ]
-
-[node name="R_Low_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="0"]
-
-position = Vector2( 10.4895, -33.7411 )
-texture = ExtResource( 10 )
-
-[node name="R_Ankle_Joint" type="Position2D" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="1"]
-
-position = Vector2( 0.319977, 17.9259 )
-rotation = -0.0875647
-_sections_unfolded = [ "Transform" ]
-
-[node name="R_Foot" type="Sprite" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint/R_Ankle_Joint" index="0"]
-
-position = Vector2( 10.7331, -51.146 )
-texture = ExtResource( 11 )
 
 [node name="Head_Joint" type="Position2D" parent="Com_Joint" index="4"]
 
 position = Vector2( 0, -44 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Head" type="Sprite" parent="Com_Joint/Head_Joint" index="0"]
+[node name="String" parent="Com_Joint/Head_Joint" index="0" instance=ExtResource( 2 )]
+
+[node name="Head" type="Sprite" parent="Com_Joint/Head_Joint" index="1"]
 
 position = Vector2( 0, 44 )
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Jaw_Joint" type="Position2D" parent="Com_Joint/Head_Joint" index="1"]
+[node name="Jaw_Joint" type="Position2D" parent="Com_Joint/Head_Joint" index="2"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Jaw" type="Sprite" parent="Com_Joint/Head_Joint/Jaw_Joint" index="0"]
 
 position = Vector2( 0, 44 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="R_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="5"]
+[node name="R_Hip_Joint" type="Position2D" parent="Com_Joint" index="5"]
 
+editor/display_folded = true
+position = Vector2( -7.68937, 7.40458 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="R_Up_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint" index="0"]
+
+position = Vector2( 9.09088, -7.69228 )
+texture = ExtResource( 12 )
+
+[node name="R_Knee_Joint" type="Position2D" parent="Com_Joint/R_Hip_Joint" index="1"]
+
+position = Vector2( -1.34518, 26.1588 )
+rotation = 0.174533
+_sections_unfolded = [ "Transform" ]
+
+[node name="R_Low_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="0"]
+
+position = Vector2( 10.4895, -33.7411 )
+texture = ExtResource( 13 )
+
+[node name="R_Ankle_Joint" type="Position2D" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="1"]
+
+editor/display_folded = true
+position = Vector2( 0.319977, 17.9259 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="R_Foot" type="Sprite" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint/R_Ankle_Joint" index="0"]
+
+position = Vector2( 10.7331, -51.146 )
+texture = ExtResource( 14 )
+
+[node name="String" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="2" instance=ExtResource( 2 )]
+
+rotation = 0.751321
+scale = Vector2( 1, -900 )
+
+[node name="R_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="6"]
+
+editor/display_folded = true
 position = Vector2( -14.7645, -29.9754 )
-rotation = -0.656736
+rotation = -0.174533
 _sections_unfolded = [ "Transform" ]
 
 [node name="R_Up_Arm" type="Sprite" parent="Com_Joint/R_Shoulder_Joint" index="0"]
 
 position = Vector2( 15.5919, 29.9947 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="R_Elbow_Joint" type="Position2D" parent="Com_Joint/R_Shoulder_Joint" index="1"]
 
 position = Vector2( -8.75967, 15.4754 )
-rotation = -0.219508
 _sections_unfolded = [ "Transform" ]
 
 [node name="R_Low_Arm" type="Sprite" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint" index="0"]
 
 position = Vector2( 24.4962, 14.5074 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
 [node name="R_Wrist_Joint" type="Position2D" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint" index="1"]
 
 position = Vector2( 0.358475, 16.8488 )
-rotation = -0.219508
 _sections_unfolded = [ "Transform" ]
 
 [node name="R_Hand" type="Sprite" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint/R_Wrist_Joint" index="0"]
 
 position = Vector2( 23.6601, -1.79243 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Offset" ]
+
+[node name="String" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint/R_Wrist_Joint" index="1" instance=ExtResource( 2 )]
 
 [node name="Skeleton" type="AnimationPlayer" parent="." index="1"]
 
@@ -389,6 +654,10 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.5
 anims/Bye = SubResource( 1 )
+anims/Idle = SubResource( 4 )
+"anims/New Anim" = SubResource( 5 )
+anims/String_Walk = SubResource( 3 )
+"anims/String_Walk 2" = SubResource( 3 )
 anims/Walk = SubResource( 2 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
