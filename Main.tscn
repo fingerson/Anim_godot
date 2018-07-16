@@ -7,7 +7,7 @@
 [node name="Skeleton" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 491.011, 280.614 )
-scale = Vector2( 2, 2 )
+scale = Vector2( -2, 2 )
 _sections_unfolded = [ "Transform" ]
 
 
