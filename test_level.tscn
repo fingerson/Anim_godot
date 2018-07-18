@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 1066.93, 10 )
 
-[node name="test_level" type="Node2D" index="0"]
+[node name="test_level" type="Node2D"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 

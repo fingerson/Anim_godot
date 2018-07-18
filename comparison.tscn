@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://comparison.gd" type="Script" id=1]
+[ext_resource path="res://Skelly.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Skeleton2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Skeleton.tscn" type="PackedScene" id=4]
+
+[node name="comparison" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Skelly" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 861.457, 271.816 )
+scale = Vector2( 3, 3 )
+
+[node name="Skeleton" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 162.572, 282.515 )
+scale = Vector2( 3, 3 )
+_sections_unfolded = [ "Transform" ]
+anim = "Walk"
+
+[node name="Skeleton2" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 509.995, 281.27 )
+scale = Vector2( 3, 3 )
+_sections_unfolded = [ "Transform" ]
+anim = "String_Walk"
+
+

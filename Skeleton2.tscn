@@ -1,22 +1,21 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Skeleton.gd" type="Script" id=1]
-[ext_resource path="res://String.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Hand_skeleton1.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Arm_skeleton1.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Arm_skeleton1.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Foot_skeleton1.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Leg_skeleton1.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Leg_skeleton1.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Sprites/Skeleton/Torso_skeleton1.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Sprites/Skeleton/Head_skeleton1.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Sprites/Skeleton/Jaw_skeleton1.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Leg_skeleton1.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Leg_skeleton1.png" type="Texture" id=13]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Foot_skeleton1.png" type="Texture" id=14]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Arm_skeleton1.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Arm_skeleton1.png" type="Texture" id=16]
-[ext_resource path="res://Graphics/Sprites/Skeleton/R_Hand_skeleton1.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Hand_skeleton1.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Arm_skeleton1.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Arm_skeleton1.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Foot_skeleton1.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Low_Leg_skeleton1.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Sprites/Skeleton/L_Up_Leg_skeleton1.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Sprites/Skeleton/Torso_skeleton1.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Sprites/Skeleton/Head_skeleton1.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Sprites/Skeleton/Jaw_skeleton1.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Leg_skeleton1.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Leg_skeleton1.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Foot_skeleton1.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Up_Arm_skeleton1.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Low_Arm_skeleton1.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Sprites/Skeleton/R_Hand_skeleton1.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 
@@ -468,9 +467,7 @@ anim = "Idle"
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="String" parent="Com_Joint" index="0" instance=ExtResource( 2 )]
-
-[node name="L_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="1"]
+[node name="L_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="0"]
 
 position = Vector2( 12.785, -30.219 )
 rotation = 0.349066
@@ -484,32 +481,26 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="L_Wrist_Joint" type="Position2D" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint" index="0"]
 
-editor/display_folded = true
 position = Vector2( 0.193718, 15.6906 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="String" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint/L_Wrist_Joint" index="0" instance=ExtResource( 2 )]
-
-rotation = 2.48353e-08
-
-[node name="L_Hand" type="Sprite" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint/L_Wrist_Joint" index="1"]
+[node name="L_Hand" type="Sprite" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint/L_Wrist_Joint" index="0"]
 
 position = Vector2( -19.793, -1.99354 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="L_Low_Arm" type="Sprite" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint" index="1"]
 
 position = Vector2( -19.3711, 12.9787 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="L_Up_Arm" type="Sprite" parent="Com_Joint/L_Shoulder_Joint" index="1"]
 
 position = Vector2( -11.6227, 28.863 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
-[node name="L_Hip_Joint" type="Position2D" parent="Com_Joint" index="2"]
+[node name="L_Hip_Joint" type="Position2D" parent="Com_Joint" index="1"]
 
-editor/display_folded = true
 position = Vector2( 5.12625, 7.68937 )
 _sections_unfolded = [ "Transform" ]
 
@@ -519,9 +510,7 @@ position = Vector2( 0.0577621, 26.4845 )
 rotation = 0.258238
 _sections_unfolded = [ "Transform" ]
 
-[node name="String" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="0" instance=ExtResource( 2 )]
-
-[node name="L_Ankle_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="1"]
+[node name="L_Ankle_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="0"]
 
 position = Vector2( -0.367973, 17.1983 )
 _sections_unfolded = [ "Transform" ]
@@ -529,55 +518,52 @@ _sections_unfolded = [ "Transform" ]
 [node name="L_Foot" type="Sprite" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint/L_Ankle_Joint" index="0"]
 
 position = Vector2( -2.37015, -51.0376 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
-[node name="L_Low_Leg" type="Sprite" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="2"]
+[node name="L_Low_Leg" type="Sprite" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="1"]
 
 position = Vector2( -3.49821, -34.0301 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="L_Up_Leg" type="Sprite" parent="Com_Joint/L_Hip_Joint" index="1"]
 
 position = Vector2( -3.55987, -7.8922 )
+texture = ExtResource( 7 )
+
+[node name="Torso" type="Sprite" parent="Com_Joint" index="2"]
+
 texture = ExtResource( 8 )
 
-[node name="Torso" type="Sprite" parent="Com_Joint" index="3"]
-
-texture = ExtResource( 9 )
-
-[node name="Head_Joint" type="Position2D" parent="Com_Joint" index="4"]
+[node name="Head_Joint" type="Position2D" parent="Com_Joint" index="3"]
 
 position = Vector2( 0, -44 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="String" parent="Com_Joint/Head_Joint" index="0" instance=ExtResource( 2 )]
-
-[node name="Head" type="Sprite" parent="Com_Joint/Head_Joint" index="1"]
+[node name="Head" type="Sprite" parent="Com_Joint/Head_Joint" index="0"]
 
 position = Vector2( 0, 44 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Jaw_Joint" type="Position2D" parent="Com_Joint/Head_Joint" index="2"]
+[node name="Jaw_Joint" type="Position2D" parent="Com_Joint/Head_Joint" index="1"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Jaw" type="Sprite" parent="Com_Joint/Head_Joint/Jaw_Joint" index="0"]
 
 position = Vector2( 0, 44 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="R_Hip_Joint" type="Position2D" parent="Com_Joint" index="5"]
+[node name="R_Hip_Joint" type="Position2D" parent="Com_Joint" index="4"]
 
-editor/display_folded = true
 position = Vector2( -7.68937, 7.40458 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="R_Up_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint" index="0"]
 
 position = Vector2( 9.09088, -7.69228 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="R_Knee_Joint" type="Position2D" parent="Com_Joint/R_Hip_Joint" index="1"]
 
@@ -588,7 +574,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="R_Low_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="0"]
 
 position = Vector2( 10.4895, -33.7411 )
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="R_Ankle_Joint" type="Position2D" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="1"]
 
@@ -599,15 +585,10 @@ _sections_unfolded = [ "Transform" ]
 [node name="R_Foot" type="Sprite" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint/R_Ankle_Joint" index="0"]
 
 position = Vector2( 10.7331, -51.146 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
-[node name="String" parent="Com_Joint/R_Hip_Joint/R_Knee_Joint" index="2" instance=ExtResource( 2 )]
+[node name="R_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="5"]
 
-rotation = 0.751321
-
-[node name="R_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="6"]
-
-editor/display_folded = true
 position = Vector2( -14.7645, -29.9754 )
 rotation = -0.174533
 _sections_unfolded = [ "Transform" ]
@@ -615,7 +596,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="R_Up_Arm" type="Sprite" parent="Com_Joint/R_Shoulder_Joint" index="0"]
 
 position = Vector2( 15.5919, 29.9947 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="R_Elbow_Joint" type="Position2D" parent="Com_Joint/R_Shoulder_Joint" index="1"]
 
@@ -625,7 +606,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="R_Low_Arm" type="Sprite" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint" index="0"]
 
 position = Vector2( 24.4962, 14.5074 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
 [node name="R_Wrist_Joint" type="Position2D" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint" index="1"]
@@ -636,10 +617,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="R_Hand" type="Sprite" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint/R_Wrist_Joint" index="0"]
 
 position = Vector2( 23.6601, -1.79243 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Offset" ]
-
-[node name="String" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint/R_Wrist_Joint" index="1" instance=ExtResource( 2 )]
 
 [node name="Skeleton" type="AnimationPlayer" parent="." index="1"]
 

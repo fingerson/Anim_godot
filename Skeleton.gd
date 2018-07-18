@@ -25,5 +25,5 @@ func stop():
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	$Skeleton.current_animation = "Walk"
+	$Skeleton.current_animation = anim
 	pass
