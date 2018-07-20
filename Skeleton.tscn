@@ -466,6 +466,7 @@ anim = "Idle"
 
 [node name="Com_Joint" type="Position2D" parent="." index="0"]
 
+rotation = -0.0910228
 _sections_unfolded = [ "Transform" ]
 
 [node name="String" parent="Com_Joint" index="0" instance=ExtResource( 2 )]
@@ -473,13 +474,13 @@ _sections_unfolded = [ "Transform" ]
 [node name="L_Shoulder_Joint" type="Position2D" parent="Com_Joint" index="1"]
 
 position = Vector2( 12.785, -30.219 )
-rotation = 0.349066
+rotation = 0.265556
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Elbow_Joint" type="Position2D" parent="Com_Joint/L_Shoulder_Joint" index="0"]
 
 position = Vector2( 7.74846, 15.1095 )
-rotation = -0.349066
+rotation = -0.523599
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Wrist_Joint" type="Position2D" parent="Com_Joint/L_Shoulder_Joint/L_Elbow_Joint" index="0"]
@@ -509,17 +510,20 @@ texture = ExtResource( 5 )
 
 [node name="L_Hip_Joint" type="Position2D" parent="Com_Joint" index="2"]
 
-editor/display_folded = true
 position = Vector2( 5.12625, 7.68937 )
+rotation = -0.364091
 _sections_unfolded = [ "Transform" ]
 
 [node name="L_Knee_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint" index="0"]
 
 position = Vector2( 0.0577621, 26.4845 )
-rotation = 0.258238
+rotation = 0.587892
 _sections_unfolded = [ "Transform" ]
 
 [node name="String" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="0" instance=ExtResource( 2 )]
+
+z_index = 1
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="L_Ankle_Joint" type="Position2D" parent="Com_Joint/L_Hip_Joint/L_Knee_Joint" index="1"]
 
@@ -548,7 +552,9 @@ texture = ExtResource( 9 )
 [node name="Head_Joint" type="Position2D" parent="Com_Joint" index="4"]
 
 position = Vector2( 0, -44 )
-_sections_unfolded = [ "Transform" ]
+rotation = 0.0910228
+z_index = 2
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="String" parent="Com_Joint/Head_Joint" index="0" instance=ExtResource( 2 )]
 
@@ -572,6 +578,8 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 position = Vector2( -7.68937, 7.40458 )
+rotation = -0.0835101
+z_index = 3
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="R_Up_Leg" type="Sprite" parent="Com_Joint/R_Hip_Joint" index="0"]
@@ -609,8 +617,9 @@ rotation = 0.751321
 
 editor/display_folded = true
 position = Vector2( -14.7645, -29.9754 )
-rotation = -0.174533
-_sections_unfolded = [ "Transform" ]
+rotation = -0.531112
+z_index = 4
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="R_Up_Arm" type="Sprite" parent="Com_Joint/R_Shoulder_Joint" index="0"]
 
@@ -620,6 +629,7 @@ texture = ExtResource( 15 )
 [node name="R_Elbow_Joint" type="Position2D" parent="Com_Joint/R_Shoulder_Joint" index="1"]
 
 position = Vector2( -8.75967, 15.4754 )
+rotation = -0.182046
 _sections_unfolded = [ "Transform" ]
 
 [node name="R_Low_Arm" type="Sprite" parent="Com_Joint/R_Shoulder_Joint/R_Elbow_Joint" index="0"]
